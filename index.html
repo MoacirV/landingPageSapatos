@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="imgem/ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Sapatilla</title>
+</head>
+<body>
+    <div class="form">
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#"><img src="imgs/sapatila.png" alt="logo" class="logo"></a>
+                <ul id="menu">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Outros modelos</a></li>
+                    <li><a href="#">Contatos</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2><span id="marca">Sapatilla</span>, onde a moda encontra o conforto.</span></h2>
+                    <p> Dê o próximo passo com confiança e conheça a sapatilla que combina com sua personalidade. O equilíbrio perfeito entre design moderno e conforto inigualável.</p>
+                    <a href="#">Leia mais</a>
+                </div>
+                <div class="imgBox">
+                    <img src="imgs/sapatila.png" alt="sapatila" class="sapatilla">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img class="imgtenis" src="imgs/tenis-amarelo.png" onclick="imgSlider('imgs/tenis-amarelo.png');changeCircleColor('#f6e230')" alt="imagem 1"></li> 
+                <li><img class="imgtenis" src="imgs/tenis-azul.png" onclick="imgSlider('imgs/tenis-azul.png');changeCircleColor('#0877D0')" alt="imagem 2"></li> 
+                <li><img class="imgtenis" src="imgs/tenis-vermelho.png" onclick="imgSlider('imgs/tenis-vermelho.png');changeCircleColor('#F01A0E')" alt="imagem 3"></li> 
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="imgs/logos/facebook.png" alt="Facebook"></a></li> 
+                <li><a href="#"><img src="imgs/logos/twitter.png" alt="Twitter"></a></li> 
+                <li><a href="#"><img src="imgs/logos/instagram.png" alt="Instagram"></a></li> 
+            </ul>
+        </section>
+    </div>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.sapatilla').src = anything; 
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
