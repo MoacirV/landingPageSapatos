@@ -72,7 +72,8 @@ header ul li {
 header ul li a {
     display: inline-block;
     color: #333;
-    font-weight: 400;
+    font-size: 1.175rem;
+    font-weight: 700;
     margin-left: 40px;
     text-decoration: none;
 }
@@ -94,8 +95,8 @@ header ul li a {
 
 .content .textBox h2 {
     color: #333;
-    font-size: 4em;
-    line-height: 1.4em;
+    font-size: 2.7rem;
+    line-height: 1em;
     font-weight: 500;
 }
 
@@ -107,6 +108,8 @@ header ul li a {
 
 .content .textBox p {
     color: #333;
+    width: 80%;
+    font-size: 0.8rem;
 }
 
 .content .textBox a {
@@ -167,11 +170,20 @@ header ul li a {
 }
 
 #menu {
+    z-index: 20;
     position: absolute;
     left: 0; /* Alinhe à esquerda */
     width: 100%; /* Ocupe toda a largura do contêiner pai */
     display: flex;
     justify-content: center;
+}
+
+#menu li a {
+    transition: transform 0.3s; 
+}
+
+#menu li a:hover { 
+    transform: scale(1.055);
 }
 
 /* Estilo dos ícones: redes sociais */
@@ -202,6 +214,11 @@ header ul li a {
     height: auto;
     filter: none;
     opacity: 1;
+    transition: transform 0.3s;
+}
+
+.sci li a img:hover{
+    transform: scale(1.1);
 }
 
 /* Estilo do círculo lateral esquerdo */
@@ -212,20 +229,28 @@ header ul li a {
     width: 100%;
     height: 100%;
     background: #E23703;
-    clip-path: circle(800px at right 800px);
+    clip-path: circle(45em at right 40em);
     border-radius: 0px 10px 10px 0px;
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
     .content .textBox h2 {
-        font-size: 3em;
+        font-size: 2em;
     }
     .content .textBox p, .content .textBox a {
-        font-size: 0.9em;
+        font-size: 0.7em;
+    }
+
+    .content .textBox p{
+        width: 60%;
     }
     .content .imgBox img {
         max-width: 400px;
+    }
+
+    .circle{
+        clip-path: circle(40em at right 40em);
     }
     
     
@@ -254,6 +279,10 @@ header ul li a {
         margin-left: 20px;
     }
     
+}
+
+@media screen and(max-width:885px) {
+   
 }
 
 @media (max-width: 768px) {
